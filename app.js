@@ -8,9 +8,13 @@ let cartita = document.getElementById("carta").value
 let enviar = document.getElementById("buttonsend")
 
 Swal.fire({
-	title: "claro",
-	confirmButtonText: "si"
-})
+      	imageUrl: "mileslogo.png",
+      	imageWidth: 135,
+  		imageHeight: 102,
+      	title: "Instrucciones:",
+      	text: "Rellena los campos correctamente, asegurate que tu correo este activo y sin errores. No te olvides de indicar en las casillas de verificacion si tu carta quieres que sea anonima o quieres que la persona a recibir vea su remitente",
+      	confirmButtonText: "OK!"
+      });
 
 let navegador = navigator.userAgent;
         if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
