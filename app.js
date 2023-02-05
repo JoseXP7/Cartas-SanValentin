@@ -24,7 +24,7 @@ function validacionForm() {
 }
 
 function captchaValidar(a) {
-    var response = grecaptcha.getResponse();
+    let response = grecaptcha.getResponse();
 
     if(response.length == 0){
         alert("Captcha no verificado");
