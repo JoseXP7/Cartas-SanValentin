@@ -7,6 +7,10 @@ let para = document.getElementById("receptor").value
 let cartita = document.getElementById("carta").value
 let enviar = document.getElementById("buttonsend")
 
+Swal.fire({
+	title: "claro",
+	confirmButtonText: "si"
+})
 
 let navegador = navigator.userAgent;
         if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
@@ -29,6 +33,7 @@ function recaptcha_ok() {
 
     if(response.length == 0){
         alert("Captcha no verificado");
+        document.getElementById("buttonsend").disabled = true
         return false;
       event.preventDefault();
     } else {
