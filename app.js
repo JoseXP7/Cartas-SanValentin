@@ -33,7 +33,7 @@ function recaptcha_ok() {
       event.preventDefault();
     } else {
       alert("Captcha verificado");
-      document.getElementById("buttonsend").enabled = true
+      document.getElementById("buttonsend").disabled = false
       return true;
     }
   }
