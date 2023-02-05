@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Heebo&display=swap');
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 4em;
+	padding-bottom: 4em;
+	background: linear-gradient(90deg, rgba(227,34,0,1) 0%, rgba(191,0,200,1) 100%);
+	overflow: visible;
+}
+
+.swal2-title {
+  font-size: 3em !important;
+  font-family: 'Great Vibes', cursive;
+}
+
+.cuerpo {
+	box-sizing: border-box;
+	background: #f5c2ff;
+	width: 550px;
+	max-height: 1000px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family:'Great Vibes', cursive;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+	padding: 1em;
+}
+
+.cuerpo p {
+	margin: 0.5rem 0 1rem 0
+}
+
+.caja-figura {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+.formulario .datos {
+	font-family: 'Heebo', sans-serif;
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: start
+}
+
+.formulario .datos input {
+	border: 2px solid black;
+	border-radius: 8px;
+	width: 15rem;
+	padding: 0.5rem;
+}
+
+.formulario .escribircarta, .anonimato {
+	font-family: 'Heebo', sans-serif;
+	font-size: 1rem
+}
+
+.formulario .escribircarta {
+	margin: 0.5rem 0 1rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center
+}
+
+.formulario .escribircarta textarea {
+	border: 2px solid black;
+	border-radius: 8px;
+	width: 15rem;
+	max-width: 20rem;
+	max-height: 8rem
+}
+
+.formulario .anonimato {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+}
+
+figure {
+	margin: 0
+}
+
+figure img {
+	width: 3em;
+	animation: pulse infinite;
+	animation-duration: 1s
+}
+
+.formulario hr {
+	margin: 10px 0 0 0;
+	color: #DC1A21;
+}
+
+.formulario .botones-final input {
+	width: 100px;
+	padding: 5px;
+	border: 2px solid black;
+	border-radius: 5px;
+	font-family: 'Heebo', sans-serif;
+	font-weight: bold
+}
+
+.formulario #nombre-user:valid {
+	background: lightgreen;
+}
+
+.formulario #nombre-user:invalid {
+	background: #ff7074;
+}
+
+.formulario #email:valid {
+	background: lightgreen;
+}
+
+.formulario #email:invalid {
+	background: #ff7074;
+}
+
+.formulario #receptor:valid {
+	background: lightgreen;
+}
+
+.formulario #receptor:invalid {
+	background: #ff7074;
+}
+
+#my-canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 100000;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+#my-canvas.active {
+	visibility: visible;
+}
+
+@media (max-width: 667px) {
+	.formulario .datos {
+		align-items: center
+	}
+	.formulario .anonimato {
+		flex-direction: column;
+		gap: 0;
+	}
+}
+/*josephcode_87 - I am the only one*/
