@@ -34,6 +34,5 @@ function recaptcha_ok() {
     } else {
       alert("Captcha verificado");
       document.getElementById("buttonsend").disabled = false
-      return true;
     }
   }
