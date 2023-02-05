@@ -153,6 +153,9 @@ figure img {
 }
 
 @media (max-width: 667px) {
+	.envio {
+	width: 100%
+	}
 	.formulario .datos {
 		align-items: center
 	}
