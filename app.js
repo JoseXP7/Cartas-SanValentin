@@ -33,6 +33,7 @@ function recaptcha_ok() {
       event.preventDefault();
     } else {
       alert("Captcha verificado");
+      enviar.enabled = true
       return true;
     }
   }
