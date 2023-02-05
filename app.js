@@ -32,7 +32,12 @@ function recaptcha_ok() {
         return false;
       event.preventDefault();
     } else {
-      alert("Captcha verificado");
+      Swal.fire({
+      	icon: "info",
+      	title: "Captcha Completado!",
+      	text: "Presiona el boton Enviar! ❤️ para enviar tu carta",
+      	confirmButtonText: "OK!"
+      });
       document.getElementById("buttonsend").disabled = false
     }
   }
