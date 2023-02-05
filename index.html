@@ -17,7 +17,7 @@
 			</figure>
 			<p>¡Enviale una carta a tu crush! ❤️</p>
 		</div>
-		<form action="https://formsubmit.co/ed5cff631ba860964481259da535e56f" method="post" class="formulario">
+		<form action="https://formsubmit.co/ed5cff631ba860964481259da535e56f" method="post" class="formulario" onsubmit="return captchaValidar(this)">
 			<div class="datos">
 			<label for="nombre-user">Tu nombre</label>
 			<input type="text" id="nombre-user" name="nombre" placeholder="Alguien especial c:" required pattern="[A-Za-z- -Á-É-Í-Ó-Ú-á-é-í-ó-ú]{1,30}">
@@ -41,11 +41,11 @@
 				</div>
 			</div>
 			<div class="caja-captcha">
-				<div class="g-recaptcha" data-sitekey="6LeozlQkAAAAABUZ--cddMHhqqU7X0LljPpwRs3z"></div>
+				<div class="g-recaptcha" data-sitekey="6LeozlQkAAAAABUZ--cddMHhqqU7X0LljPpwRs3z" data-callback="enabledSubmit"></div>
 			</div>
 			<hr>
 			<div class="botones-final">
-				<input type="submit" class="enviar" value="Enviar! ❤️">
+				<input type="submit" id="buttonsend" class="enviar" value="Enviar! ❤️" disabled>
 				<input type="reset" class="reiniciar" value="Limpiar">
 			</div>
 			<input type="hidden" name="_captcha" value="false">

@@ -22,3 +22,16 @@ function validacionForm() {
 	confeti.classList.add("active")
 	} 
 }
+
+function captchaValidar(a) {
+    var response = grecaptcha.getResponse();
+
+    if(response.length == 0){
+        alert("Captcha no verificado");
+        return false;
+      event.preventDefault();
+    } else {
+      alert("Captcha verificado");
+      return true;
+    }
+  }
