@@ -5,6 +5,7 @@ let nombre = document.getElementById("nombre-user").value
 let correo = document.getElementById("email").value
 let para = document.getElementById("receptor").value
 let cartita = document.getElementById("carta").value
+let enviar = document.getElementById("buttonsend")
 
 
 let navegador = navigator.userAgent;
@@ -23,7 +24,7 @@ function validacionForm() {
 	} 
 }
 
-function captchaValidar(a) {
+function recaptcha_ok() {
     let response = grecaptcha.getResponse();
 
     if(response.length == 0){
