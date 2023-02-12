@@ -23,7 +23,8 @@ body {
 
 .cuerpo {
 	box-sizing: border-box;
-	background: #f5c2ff;
+	background-color: rgba(245, 194, 255, 0.6);  /*
+	background: #f5c2ff; */
 	width: 550px;
 	max-height: 1000px;
 	border-radius: 8px;
