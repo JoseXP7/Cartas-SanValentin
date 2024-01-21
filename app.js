@@ -8,7 +8,7 @@ let cartita = document.getElementById("carta").value
 let enviar = document.getElementById("buttonsend")
 
 Swal.fire({
-        imageUrl: "mileslogo.png",
+        imageUrl: "assets/mileslogo.png",
         imageWidth: 135,
       imageHeight: 102,
         title: "Instrucciones:",

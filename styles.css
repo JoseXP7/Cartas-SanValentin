@@ -9,7 +9,7 @@ body {
 	align-items: center;
 	padding-top: 4em;
 	padding-bottom: 4em;
-	background: url(Horizontal-SV.jpg);
+	background: url(assets/Horizontal-SV.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	/*background: linear-gradient(90deg, rgba(227,34,0,1) 0%, rgba(191,0,200,1) 100%);*/
