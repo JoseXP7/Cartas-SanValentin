@@ -8,12 +8,12 @@ let cartita = document.getElementById("carta").value
 let enviar = document.getElementById("buttonsend")
 
 Swal.fire({
-      	imageUrl: "mileslogo.png",
-      	imageWidth: 135,
-  		imageHeight: 102,
-      	title: "Instrucciones:",
-      	text: "Rellena los campos correctamente, asegurate que tu correo este activo y sin errores. No te olvides de indicar en las casillas de verificacion si tu carta quieres que sea anonima o quieres que la persona a recibir vea su remitente",
-      	confirmButtonText: "OK!"
+        imageUrl: "mileslogo.png",
+        imageWidth: 135,
+      imageHeight: 102,
+        title: "Instrucciones:",
+        text: "Rellena los campos correctamente, asegurate que tu correo este activo y sin errores. No te olvides de indicar en las casillas de verificacion si tu carta quieres que sea anonima o quieres que la persona a recibir vea su remitente",
+        confirmButtonText: "OK!"
       });
 
 let navegador = navigator.userAgent;
@@ -25,11 +25,11 @@ let navegador = navigator.userAgent;
 }
 
 function validacionForm() {
-	if (document.getElementById("carta").value.length == 0) {
-	console.log("gei")
+  if (document.getElementById("carta").value.length == 0) {
+  console.log("gei")
 } else {
-	confeti.classList.add("active")
-	} 
+  confeti.classList.add("active")
+  } 
 }
 
 function recaptcha_ok() {
@@ -42,10 +42,10 @@ function recaptcha_ok() {
       event.preventDefault();
     } else {
       Swal.fire({
-      	icon: "info",
-      	title: "Captcha Completado!",
-      	text: "Presiona el boton Enviar! ❤️ para enviar tu carta",
-      	confirmButtonText: "OK!"
+        icon: "info",
+        title: "Captcha Completado!",
+        text: "Presiona el boton Enviar! ❤️ para enviar tu carta",
+        confirmButtonText: "OK!"
       });
       document.getElementById("buttonsend").disabled = false
     }
