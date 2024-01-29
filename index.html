@@ -10,7 +10,74 @@
 	<script src="sweetalert2.all.js"></script>
 </head>
 <body>
-	<section id="cuerposection" class="cuerpo" ontouchstart="validacionForm()"
+	<section class="container-fluid">
+		<div class="row">
+			<div class="col-lg-6 cuerpo-form shadow">
+				<h1 class="mt-5 text-center">¡Enviale una carta a tu crush! ❤️</h1>
+				<form action="https://formsubmit.co/cartasvalentinucla@gmail.com" method="POST">
+					<div class="row justify-content-center">
+					<div class="mt-4 input-campo">
+						<label class="form-label" for="nombre">Tu Nombre</label>
+						<input class="form-control" type="text" name="nombre" id="nombre" placeholder="Alguien especial"></input>
+					</div>
+					<div class="mt-3 input-campo">
+						<label class="form-label" for="email">Tu Correo</label>
+						<input class="form-control" type="email" name="email" id="email" placeholder="tuamor@gmail.com"></input>
+					</div>
+					<div class="mt-3 input-campo">
+						<label class="form-label" for="receptor">¿Para Quien?</label>
+						<input class="form-control" type="text" name="receptor" id="receptor" placeholder="Para una persona especial"></input>
+					</div>
+					<div class="mt-3 input-campo">
+						<label class="form-label" for="carrera">Carrera del afortunada(o)</label>
+						<select class="form-select" name="carrera" id="carrera">
+							<option value="informatica">Ingeniería en Informática</option>
+							<option value="telematica">Ingeniería en Telemática</option>
+							<option value="produccion">Ingeniería de Producción</option>
+							<option value="analisis">Análisis de Sistemas</option>
+							<option value="fisica">Licenciatura en Física</option>
+							<option value="matematica">Licenciatura en Matemática</option>
+						</select>
+					</div>
+					<div class="mt-3 input-campo">
+						<label for="carta">🖋 Escribe tu carta</label>
+						<textarea class="form-control" name="" id="carta" rows="3" placeholder="Las rosas son rojas..."></textarea>
+					</div>	
+					</div>
+					<div class="mt-3 d-flex justify-content-center">
+						<div class="form-check form-check-inline mt-3">
+							<label class="form-check-label" for="publico">👀 Quiero que lo vea</label>
+							<input class="form-check-input" type="checkbox" id="publico" name="publico" checked>
+						</div>
+						<div class="form-check form-check-inline mt-3">
+							<label class="form-check-label" for="anonimo">🥷 Quiero ser anonimo</label>
+							<input class="form-check-input" type="checkbox" id="anonimo" name="anonimo">
+						</div>
+					</div>
+					
+					<div class="row mt-3 mb-3">
+						<div class="d-grid gap-2 col-6 mx-auto">
+							<input class="btn btn-danger" type="submit" value="Enviar! ❤️">
+							<input class="btn btn-dark" type="reset" value="Limpiar">
+						</div>
+					</div>
+					<input type="hidden" name="_next" value="thanks.html">
+				</form>
+			</div>
+			<div class="col-lg-6 d-flex justify-content-center align-items-center">
+				<figure class="text-center">
+					<blockquote class="blockquote">
+						<p>Love</p>
+					</blockquote>
+					<figcaption class="blockquote-footer">
+						Un estudiante Uclaista
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	</section>
+
+	<!--<section id="cuerposection" class="cuerpo" ontouchstart="validacionForm()"
 	onmouseover="validacionForm()">
 		<div class="caja-figura">
 			<figure>
@@ -51,7 +118,7 @@
 			</div>
 			<input type="hidden" name="_captcha" value="false">
 		</form>
-	</section>
+	</section>-->
 	<canvas id="my-canvas"></canvas>
 	<script src="app.js"></script>
 	<script src="index.min.js"></script>

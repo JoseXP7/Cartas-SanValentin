@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Heebo&display=swap');
+body {
+	background: url(assets/Horizontal-SV.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	/*background: linear-gradient(90deg, rgba(227,34,0,1) 0%, rgba(191,0,200,1) 100%);*/
+	overflow: visible;
+}
+
+.cuerpo-form {
+	height: 100%;
+	background: rgba(254, 237, 255, 0.6);
+}
+
+.input-campo {
+	width: 400px !important;
+}
+
+.swal2-title {
+  font-size: 3em !important;
+  font-family: 'Great Vibes', cursive;
+}
+
+#my-canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 100000;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+#my-canvas.active {
+	visibility: visible;
+}
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss'
