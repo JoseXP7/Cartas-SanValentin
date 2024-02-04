@@ -4,16 +4,50 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles.css">
+	<link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 	<title>Carta Enviada ❤️</title>
 </head>
 <body>
-	<section class="container">
-		<h1>¡Carta Enviada ❤️!</h1>
+	<section class="container thanks-cuerpo pt-3 shadow-lg">
+		<h1 class="thanks-title">¡<span class="mascara">Carta Enviada</span> <span class="mascara-corazon">❤️</span>!</h1>
 		<div class="row">
-			<div class="col">
-				
+			<div class="col-lg-6 col-md-12">
+				<h3 class="mt-3 thanks-title">¡Tu carta se ha enviado!, mira las siguientes indicaciones:</h3>
+				<p>Sigue las cuentas de:</p>
+				<ul class="list-group list-group-flush rounded-3">
+					<li class="list-group-item">Si eres DCyT sigue a: <a href="https://www.instagram.com/centrodeestudiantesdcyt/"> @centrodeestudiantesdcyt</a> <img class="ps-2" src="assets/cedcyt.png" width="28" alt=""></li>
+					<li class="list-group-item">Si eres DCV sigue a: <a href="https://www.instagram.com/lambda_cedic/"> @cedcv</a> <img class="ps-2" src="assets/cedcv.png" width="28" alt=""></li>
+					<li class="list-group-item">Si eres DIC sigue a: <a href="https://www.instagram.com/cedcv/"> @lambda_cedic</a> <img class="ps-2" src="assets/cedic.png" width="28" alt="a"></li>
+				</ul>
+				<p class="mt-3">Las cartas se enviarán al respectivo Centro de Estudiantes de cada decanato, ¡checkea sus historias!</p>
 			</div>
 		</div>
+		<h2 class="title-brands text-center">Evento organizado por los Centros de Estudiantes</h2>
+		<div class="row align-items-center justify-content-center mt-4 ce-logos">
+				<div class="col-lg-4 d-flex justify-content-center p-4">
+					<img src="assets/cedcytvertical.png" width="150" alt="Logo CE DCyT">
+				</div>
+				<div class="col-lg-4 d-flex justify-content-center p-4">
+					<img src="assets/cedcvhorizontal.png" width="200" alt="Logo CE DCV">
+				</div>
+				<div class="col-lg-4 d-flex justify-content-center p-4">
+					<img src="assets/cedic.png" width="100" alt="Logo CE DIC">
+				</div>
+			</div>
 	</section>
+	<canvas id="my-canvas"></canvas>
+	<script src="index.min.js"></script>
+	<script>
+		let confeti = document.querySelector("#my-canvas")
+		
+		window.addEventListener('load', function(){
+			confeti.classList.add("active")
+		})
+
+		var confettiElement = document.getElementById('my-canvas');
+        var confettiSettings = { target: confettiElement };
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();        
+	</script>
 </body>
 </html>

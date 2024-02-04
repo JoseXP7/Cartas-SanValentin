@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Heebo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
 body {
 	background: url(assets/Horizontal-SV.jpg);
 	background-size: cover;
@@ -12,13 +12,77 @@ body {
 	background: rgba(254, 237, 255, 0.6);
 }
 
+.title {
+	font-family: 'Protest Riot', cursive;
+}
+
 .input-campo {
 	width: 400px !important;
 }
 
 .swal2-title {
-  font-size: 3em !important;
-  font-family: 'Great Vibes', cursive;
+  font-size: 2.5em !important;
+  font-family: 'Protest Riot', cursive;
+}
+
+.neonheart {
+	animation: pulse infinite;
+	animation-duration: 1s
+}
+
+.cita {
+	font-family: 'Protest Riot', cursive;
+	width: 20em;
+	text-shadow: #D00075 1px 0 10px;
+}
+
+.autor {
+	font-family: 'Protest Riot', cursive;
+	text-shadow: #717171 1px 0 10px;
+}
+
+.btn-primary {
+	background: linear-gradient(180deg, rgba(255,80,198,1) 35%, rgba(255,0,65,1) 100%);
+	border: 0 !important;
+	color: #fff !important
+}
+
+.btn-primary:hover {
+	box-shadow: 0 12px 16px 0 rgba(247,0,132,0.50),0 17px 50px 0 rgba(247,0,132,0.50);
+}
+
+.btn-dark:hover {
+	box-shadow: 0 12px 16px 0 rgba(71,71,71,0.30),0 17px 50px 0 rgba(71,71,71,0.30);
+}
+
+.mascara {
+	background: -webkit-linear-gradient(#ee78b5, #e10180);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.mascara-corazon {
+	color: #E40036
+}
+
+/* THANKS PAGE*/
+
+.thanks-cuerpo {
+	height: 100vh;
+	background: rgba(254, 237, 255, 0.6);
+}
+
+.thanks-title {
+	font-family: 'Protest Riot', cursive;
+}
+
+.ce-logos {
+	background: rgba(150,150,150,0.50);
+}
+
+.title-brands {
+	text-transform: uppercase;
+	font-family: 'Protest Riot', cursive;
 }
 
 #my-canvas {
@@ -35,5 +99,7 @@ body {
 #my-canvas.active {
 	visibility: visible;
 }
+
+$primary: #D63484;
 
 @import 'node_modules/bootstrap/scss/bootstrap.scss'

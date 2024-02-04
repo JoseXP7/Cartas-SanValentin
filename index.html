@@ -5,31 +5,31 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 	<title>Cartitas ❤️</title>
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<script src="sweetalert2.all.js"></script>
 </head>
 <body>
 	<section class="container-fluid">
 		<div class="row">
 			<div class="col-lg-6 cuerpo-form shadow">
-				<h1 class="mt-5 text-center">¡Enviale una carta a tu crush! ❤️</h1>
-				<form action="https://formsubmit.co/cartasvalentinucla@gmail.com" method="POST">
+				<h1 class="mt-5 text-center title">¡Envia una <span class="mascara">carta</span> a tu <span class="mascara">crush</span>! <span class="mascara-corazon">❤️</span></h1>
+				<form action="https://formsubmit.co/cartasvalentinucla@gmail.com" id="formulario" method="POST">
 					<div class="row justify-content-center">
 					<div class="mt-4 input-campo">
-						<label class="form-label" for="nombre">Tu Nombre</label>
-						<input class="form-control" type="text" name="nombre" id="nombre" placeholder="Alguien especial"></input>
+						<label class="form-label" for="nombre"><i class="bi bi-person-fill"></i> Tu Nombre</label>
+						<input class="form-control" type="text" name="nombre" id="nombre" placeholder="Alguien especial" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]{4,40}$" required></input>
 					</div>
 					<div class="mt-3 input-campo">
-						<label class="form-label" for="email">Tu Correo</label>
-						<input class="form-control" type="email" name="email" id="email" placeholder="tuamor@gmail.com"></input>
+						<label class="form-label" for="email"><i class="bi bi-envelope-fill"></i> Tu Correo</label>
+						<input class="form-control" type="email" name="email" id="email" placeholder="tuamor@gmail.com" pattern="[^@ \t\r\n]+@gmail\.com" required></input>
 					</div>
 					<div class="mt-3 input-campo">
-						<label class="form-label" for="receptor">¿Para Quien?</label>
-						<input class="form-control" type="text" name="receptor" id="receptor" placeholder="Para una persona especial"></input>
+						<label class="form-label" for="receptor"><i class="bi bi-person-hearts"></i> ¿Para Quien?</label>
+						<input class="form-control" type="text" name="receptor" id="receptor" placeholder="Para una persona especial" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]{4,40}$" required></input>
 					</div>
 					<div class="mt-3 input-campo">
-						<label class="form-label" for="carrera">Carrera del afortunada(o)</label>
+						<label class="form-label" for="carrera"><i class="bi bi-search-heart"></i> Carrera del afortunada(o)</label>
 						<select class="form-select" name="carrera" id="carrera">
 							<option value="informatica">Ingeniería en Informática</option>
 							<option value="telematica">Ingeniería en Telemática</option>
@@ -37,39 +37,46 @@
 							<option value="analisis">Análisis de Sistemas</option>
 							<option value="fisica">Licenciatura en Física</option>
 							<option value="matematica">Licenciatura en Matemática</option>
+							<option value="veterinaria">Medicina Veterinaria</option>
+							<option value="agropecuaria">T.S.U Agropecuaria</option>
+							<option value="civil">Ingeniería Civil</option>
+							<option value="urbanismo">Urbanismo</option>
 						</select>
 					</div>
 					<div class="mt-3 input-campo">
-						<label for="carta">🖋 Escribe tu carta</label>
-						<textarea class="form-control" name="carta" id="carta" rows="3" placeholder="Las rosas son rojas..."></textarea>
+						<label for="carta"><i class="bi bi-envelope-heart"></i> Escribe tu carta</label>
+						<textarea class="form-control" name="carta" id="carta" rows="3" placeholder="Las rosas son rojas..." required></textarea>
 					</div>	
 					</div>
 					<div class="mt-3 d-flex justify-content-center">
 						<div class="form-check form-check-inline mt-3">
-							<label class="form-check-label" for="publico">👀 Quiero que lo vea</label>
-							<input class="form-check-input" type="checkbox" id="publico" name="publico" checked>
+							<label class="form-check-label" for="publico"><i class="bi bi-chat-right-heart"></i> Quiero que lo vea</label>
+							<input class="form-check-input" type="radio" id="publico" name="visibilidad" value="publico" checked>
 						</div>
 						<div class="form-check form-check-inline mt-3">
-							<label class="form-check-label" for="anonimo">🥷 Quiero ser anonimo</label>
-							<input class="form-check-input" type="checkbox" id="anonimo" name="anonimo">
+							<label class="form-check-label" for="anonimo"><i class="bi bi-incognito"></i> Quiero ser anonimo</label>
+							<input class="form-check-input" type="radio" id="anonimo" name="visibilidad" value="anonimo">
 						</div>
 					</div>
 					
 					<div class="row mt-3 mb-3">
 						<div class="d-grid gap-2 col-6 mx-auto">
-							<input class="btn btn-danger" type="submit" value="Enviar! ❤️">
+							<input class="btn btn-primary" type="submit" value="Enviar! ❤️">
 							<input class="btn btn-dark" type="reset" value="Limpiar">
 						</div>
 					</div>
 					<input type="hidden" name="_next" value="thanks.html">
 				</form>
 			</div>
-			<div class="col-lg-6 d-flex justify-content-center align-items-center">
+			<div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
+				<div class="row d-flex justify-content-center">
+					<img class="img-fluid w-25 neonheart" src="assets/neonheart.png" alt="Corazón de neón">
+				</div>
 				<figure class="text-center">
 					<blockquote class="blockquote">
-						<p>Love</p>
+						<p class="cita">“Tus ojos son como dos estrellas fugaces, iluminando mi noche y llenando mi corazón de deseos.”</p>
 					</blockquote>
-					<figcaption class="blockquote-footer">
+					<figcaption class="blockquote-footer autor text-light">
 						Un estudiante Uclaista
 					</figcaption>
 				</figure>
@@ -119,14 +126,6 @@
 			<input type="hidden" name="_captcha" value="false">
 		</form>
 	</section>-->
-	<canvas id="my-canvas"></canvas>
 	<script src="app.js"></script>
-	<script src="index.min.js"></script>
-	<script>
-		var confettiElement = document.getElementById('my-canvas');
-        var confettiSettings = { target: confettiElement };
-        var confetti = new ConfettiGenerator(confettiSettings);
-        confetti.render();
-	</script>
 </body>
 </html>
